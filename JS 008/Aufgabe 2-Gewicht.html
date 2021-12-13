@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Gewicht</title>
+		
+		<script>
+			"use strict";
+			function Gewicht(Kilogramm) {
+				return Kilogramm/0.0010000;
+			}
+			
+				function  clicked(){
+				let Kilogramm  = document.getElementById("idEingabe").value;
+				let ausgabe = Kilogramm + " Kilogramm entsprechen " + Gewicht(Kilogramm)+ " Gramm"+  Jacke(Kilogramm);
+				document.getElementById("idAusgabe").innerHTML = ausgabe;
+			}
+			function Jacke(Kilogramm) {
+						
+						if (Kilogramm>100) { return " - Achte auf deine Gesundheit"}
+						else { return " "}
+			}
+			
+		</script>
+	</head>
+		
+		
+
+
+	<body>
+		<h1>Gewicht</h1>
+		Eingabe Gewicht: <input id="idEingabe" type="text" value="65"> <br /> <br />
+		<button onClick="clicked();"> Ausrechnen </button>
+		<br>
+		<div id="idAusgabe">Ergebnis</div>
+
+
+</body></html>
