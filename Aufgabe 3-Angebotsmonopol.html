@@ -1,0 +1,80 @@
+<html>
+
+
+	<head>
+
+		<title>Preisbestimmung USB-Powerbank-Großhandel</title>
+		<meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+		
+	<script>
+		
+		 "use strict";
+		 function fRechnen () {
+			let Auswahl= document.getElementById("idAuswahl").value;
+			let Menge = document.getElementById("idMenge").value;
+			let Preis;
+			let Preis1 = 19.99;
+			let Preis2 = 139.99;
+			let Preis3 = 149.99;
+			let Fixkosten = 1200; 
+			let Variable = 4;
+			let ausgabe = Umsatz(Menge,Preis) + ","+ Gesamt(Menge,Variable,Fixkosten)+ ","+ Gewinn(Umsatz,Gesamt);
+			document.getElementById("idAusgabe").innerHTML = ausgabe;
+
+			 
+		 }
+
+		 function Umsatz(Menge,Preis) {
+				return Menge*Preis;
+			}
+
+			function Gesamt(Menge,Variable,Fixkosten) {
+				return Menge*Variable+Fixkosten;
+			}
+
+			function Gewinn(Umsatz,Gesamt) {
+				return Umsatz - Gesamt;
+			}
+
+		 function fAuswahl () {
+
+			if (Auswahl=="USBLadekabel") {Preis=Preis1;}
+		  
+		  
+	 else if (Auswahl=="WLANDrucker") {Preis=Preis2;}
+		  
+		  
+	 else  {Preis=Preis3;}
+		  
+
+		 }
+		</script>
+
+	</head>
+
+
+	<body>
+<h1> Infoteam</h1>
+
+	
+	
+	
+
+	
+		Menge in Stück: <input id="idMenge" type="text" value="10"> 
+		
+		Produktauswahl: <select id="idAuswahl"> 
+							<option>USBLadekabel</option>
+							<option> WLANDrucker</option>
+							<option>Monitore</option>
+		</select>
+<br>
+	
+	<button onClick="fRechnen();">Berechne</button> 
+
+	
+	<div id="idAusgabe">Ausgabe</div> <br>
+	</body>
+
+
+<html>
